@@ -1,4 +1,4 @@
-# proj-web-express-blog
+# Simple Blog
 
 #### Process
 Built using NodeJS, ExpresJS, MOngoDB Atlas, Mongoose.
