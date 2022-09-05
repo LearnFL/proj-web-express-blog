@@ -1,8 +1,9 @@
 # Simple Blog
 
 #### Purpose
-Challenged by London Appp Brewery
-Coded by [Dennis Rotnov](www.dennisrpotnov.com) 
+Challenged by London App Brewery.
+Coded by [Dennis Rotnov](www.dennisrpotnov.com).
+
 #### Process
 Built using NodeJS, ExpresJS, MongoDB Atlas, Mongoose.
 
