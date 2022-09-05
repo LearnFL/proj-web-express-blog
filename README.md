@@ -2,7 +2,7 @@
 
 #### Purpose
 Challenged by London App Brewery.
-Coded by [Dennis Rotnov](www.dennisrpotnov.com).
+Coded by [Dennis Rotnov](https://www.dennisrotnov.com).
 
 #### Process
 Built using NodeJS, ExpresJS, MongoDB Atlas, Mongoose.
