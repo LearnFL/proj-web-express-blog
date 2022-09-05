@@ -6,6 +6,7 @@ Coded by [Dennis Rotnov](https://www.dennisrotnov.com).
 
 #### Process
 Built using NodeJS, ExpresJS, MongoDB Atlas, Mongoose.
+The app allows you to edit and delete posts.
 
 #### Details Matter
 First letter in the title and the first letter of the first word in post will be capitilized automatically.
