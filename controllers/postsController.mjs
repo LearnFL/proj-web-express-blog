@@ -15,38 +15,42 @@ function addPost (req, res) {
 
 function showHome (req, res) {
   Post.find({}, (err, doc) => {
+    if (!err) {
       res.render('home', {homeContent: homeStartingContent, allPosts: doc});
+    }  
   });
 }
 
 function showPostId (req, res) {
   Post.findOne({_id: req.params.postId}, (err, doc) => {
-    res.render('post', {data: doc});
+    if (!err) {
+      res.render('post', {data: doc});
+    }
   });
 }
 
 function deletePost (req, res) {
   console.log(req.params.postId);
   Post.findByIdAndDelete(req.params.postId, (err) => {
-    if (err){
-      console.log('Delete Error: ' + err);
+    if (!err){
+      res.redirect('/home');
     }
-    res.redirect('/home');
   });
 }
 
 function showEdit (req, res) {
   Post.findOne({_id: req.params.postId}, (err, doc) => {
-    res.render('edit', {postTitle: doc.name, postBody: doc.post, _id: doc._id, csrfToken: req.csrfToken()});
+    if (!err) {
+      res.render('edit', {postTitle: doc.name, postBody: doc.post, _id: doc._id, csrfToken: req.csrfToken()});
+    }
   });
 }
 
 function editPost (req, res) {
   Post.findByIdAndUpdate(req.params.postId, {name: req.body.postTitle, post: req.body.postBody}, (err) => {
-    if (err){
-      console.log('Edit Error: ' + err);
+    if (!err){
+      res.redirect('/home');
     }
-    res.redirect('/home');
   });
 }
 
