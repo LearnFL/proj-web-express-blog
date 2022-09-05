@@ -1,7 +1,7 @@
 # Simple Blog
 
 #### Process
-Built using NodeJS, ExpresJS, MOngoDB Atlas, Mongoose.
+Built using NodeJS, ExpresJS, MongoDB Atlas, Mongoose.
 
 #### Details Matter
 First letter in the title and the first letter of the first word in post will be capotilized automatically.
