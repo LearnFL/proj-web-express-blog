@@ -4,7 +4,7 @@
 Built using NodeJS, ExpresJS, MongoDB Atlas, Mongoose.
 
 #### Details Matter
-First letter in the title and the first letter of the first word in post will be capotilized automatically.
+First letter in the title and the first letter of the first word in post will be capitilized automatically.
 
 #### Watch Demo on YouTube
 https://youtu.be/GnotIu0cGA4
