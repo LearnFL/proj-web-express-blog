@@ -1,7 +1,7 @@
 # Simple Blog
 
 #### Purpose
-Challenged by London App Brewery.
+Challenged by London App Brewery. Copyright by London App Brewery.
 Coded by [Dennis Rotnov](https://www.dennisrotnov.com).
 
 #### Process
