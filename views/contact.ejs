@@ -1,29 +1,39 @@
 <%- include('./partials/header'); -%>
+    <div class='content-wrapper'>
+      <div class="header-index">
+        <h1>CONTACT</h1>
+        <hr>
+      </div>
 
-<h1>Contacts</h1>
+      <div class="contact-page-content">
+          <div class="contact-page-inline">
+            <p>
+              Please feel free to contact me with any question you may have.
+              I'll do my best to reply in timely manner.
+            </p>
 
-<div class="contact-content">
-  <p> <%= contactContent %> </p> <br>
-</div>
+            <p>Please <a href="/newsletter">sign up</a> for a news letter to learn more about new projects.</p>
 
-<div class="mailing-address-wrapper">
-  <p>Mailing Address</p>
-  <p> PO BOX 11224 - 2154, 123 Mail Road, City, State </p>
-</div>
+          </div>
 
-<div class="contact-form-wrapper ">
-  <form class="contact-form" action="/contact" method="post">
-    <fieldset>
-     <legend><p>Email</p></legend>
-      <label for="name">Name</label>
-      <input type="text" name="name" required placeholder="Name"> <br>
-      <label for="email">Email</label>
-      <input type="email" name="email" required placeholder="Email"> <br>
-      <textarea id="email" name="emailBody" required placeholder="Text"></textarea><br><br>
-      <input class="btn btn-secondary btn-lg" type="submit" value="Submit">
-    </fieldset>
-  </form>
-   <div class="push"></div>
-</div>
+          <div class="contact-form-wrapper ">
+            <form class="contact-form" action="/sent" method="post">
+              <input type="hidden" name="_csrf" value= <%= csrfToken %> >
+              <fieldset>
+               <legend><p><i class="fa-solid fa-envelope "></i></p></legend>
+                <label for="name">Name</label>
+                <input type="text" name="name" required placeholder="Name"> <br>
+                <label for="email">Email</label>
+                <input type="email" name="email" required placeholder="Email"> <br>
+                <textarea id="email" name="emailBody" required placeholder="Text"></textarea><br>
+                <div class="submit-button-div">
+                  <input class="btn btn-secondary btn-md" type="submit" value="Submit">
+                </div>
+              </fieldset>
+            </form>
+          </div>
 
+      </div>
+
+    </div>
 <%- include('./partials/footer'); -%>

@@ -1,0 +1,54 @@
+<%- include('./partials/header'); -%>
+<div class="content-wrapper">
+  <div class="header-index">
+    <h1>News Letter Sign Up</h1>
+    <hr />
+  </div>
+
+  <p class="signupParagraph">
+    Please sign up for a news letter. I promise not to send a letter more than
+    once month.
+  </p>
+
+  <main class="form-signup w-100 m-auto">
+    <form action="/signup" method="POST">
+      <!-- <h1 class="h3 mb-3 fw-normal">News letter sign up</h1> -->
+      <div class="form-floating">
+        <div>
+          <input
+            name="firstName"
+            type="text"
+            class="form-control"
+            placeholder="First Name"
+            required
+            autofocus
+          />
+        </div>
+        <div>
+          <input
+            name="lastName"
+            type="text"
+            class="form-control"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+        <div>
+          <input
+            name="email"
+            type="email"
+            class="form-control"
+            placeholder="email@example.com"
+            required
+          />
+        </div>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">
+        Sign up
+      </button>
+    </form>
+  </main>
+  <noscript>Your browser does not support JavaScript!</noscript>
+</div>
+
+<%- include('./partials/footer'); -%>

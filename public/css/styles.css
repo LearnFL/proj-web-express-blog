@@ -1,172 +1,424 @@
+html,
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
-/* NAVIGATION  */
-
-.navbar {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: 0;
-  border-radius: 0;
-  font-size: 12px;
-  letter-spacing: 5px;
-  margin-bottom:20px;
+.nav-float-left {
+  margin-left: auto;
+  margin-right: 11.5%;
 }
 
-.navbar-nav  li a:hover {
-  color: #BDCE65 !important;
+.nav-float-left li a {
+  color: black;
+  letter-spacing: 1px;
+}
+
+.nav-float-left a:hover {
+  color: #a2b5bb;
+  text-decoration: underline;
 }
 
 .navbar-brand {
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  margin-left: 9.5%;
+  font-family: "Oleo Script", cursive;
+  letter-spacing: 5px;
 }
 
-.navbar-nav {
-  margin-left: auto;
-}
-
-/* FOOTER */
-
-.footer-padding {
-	padding-bottom: 20px;
-}
-
-.footer {
-  margin-top: auto;
-	text-align: center;
-	width: 100%;
-	height: 60px;
-	background-color: #BDCE65;
-}
-
-.footer p {
-	margin-top: 25px;
-	font-size: 12px;
-  color: #fff;
-}
-
-.homepage-post-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* HOME PAGE */
-
-.homepage-post-link:hover {
-  color: grey;
-  cursor:pointer;
-}
-
-.homepage-post-readmore-link {
-  text-decoration: none;
-  color: #42749B;
-}
-
-.homepage-post-readmore-link:hover {
-  text-decoration: underline;
-}
-/* COMPOSE PAGE */
-
-.new-post-form textarea {
-  width: 70vw;
-  height: 30vh
-}
-
-.new-post-form input[type="text"] {
-  width: 70vw;
-}
-
-/* CONTACT PAGE */
-
-.contact-form-wrapper {
-  box-shadow: 2px 2px 2px 2px grey;
-  width: 45vw;
+.content-wrapper {
+  width: 80%;
   margin-right: auto;
   margin-left: auto;
+  padding: 0;
 }
 
-.contact-content p {
-  margin-bottom: 0;
+.header-index h1 {
+  padding: 0;
+  margin-top: 30px;
+  font-family: georgia, arial, serif;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
-.contact-form fieldset {
-  width: 40vw;
-}
-
-.contact-form input[type='text'] {
-  margin-bottom: 10px;
-}
-
-.contact-form input[type='text'], input[type='email'] {
-  width: 36vw;
-  margin-left: 0;
-  padding-left: 0;
-  text-align: left;
-}
-
-.contact-form label {
-  width: 55px;
-}
-
-.contact-form input[type='submit'] {
-  margin-top: 5px;
-  margin-left: 40%;
-  margin-bottom: 15px;
-}
-
-.contact-form textarea {
-    width:40vw;
-    height: 20vh;
-    margin-top: 10px;
-    resize: none;
-}
-
-.contact-form fieldset{
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.mailing-address-wrapper {
+.message p {
+  margin-top: 100px;
+  font-family: georgia, arial, serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: black;
   text-align: center;
-  padding-bottom: 10px;
 }
 
-.mailing-address-wrapper p {
-  margin: 0;
+/* REVEAL ON SCROLL */
+
+.section {
+  transition: transform 1s, opacity 1s;
 }
 
-@media screen and (max-width: 1480px) {
-  .contact-form input[type='text'], input[type='email'] {
-    width: 40vw;
+.section--hidden {
+  opacity: 0;
+  transform: translateY(7rem);
+}
+
+/* GRID INDEX PAGE */
+
+.container {
+  margin-top: 50px;
+}
+
+.row figure figcaption {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  font-family: georgia, arial, serif;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.icon-index:hover {
+  transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05); /* IE 9 */
+  -webkit-transform: scale(1.05, 1.05);
+  color: blue;
+}
+
+.icon-index {
+  margin-top: 60px;
+  max-height: 80px;
+  transition: transform 1s, opacity 1s;
+}
+
+@media screen and (max-width: 995px) {
+  .icon-index {
+    margin-top: 0px;
   }
 }
 
+/* SCROLL INTO VIEW EFFECT ICONS INDEX PAGE*/
 
-@media screen and (max-width: 770px) {
+.section--hidden__side {
+  opacity: 0;
+  transform: translateX(10rem);
+}
+
+.icons-index-page {
+  transition: transform 1.5s, opacity 1.5s;
+}
+
+/*ABOUT PAGE */
+.btn__about {
+  text-align: center;
+}
+
+.btn__about a {
+  display: inline-block;
+  width: 180px;
+  margin-bottom: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 4px;
+  background-color: #a2b5bb;
+  border-radius: 5px;
+}
+
+.courses-image {
+  width: 40px;
+  margin-right: 20px;
+  vertical-align: baseline;
+}
+
+.courses h5 {
+  display: inline-block;
+}
+
+.courses-grid p {
+  text-align: left;
+}
+
+.shaded-grid {
+  background-color: #f2f2f2 !important;
+}
+
+@media screen and (max-width: 750px) {
+  .btn__about a {
+    padding: 0px;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 15px;
+    width: 190px;
+    margin-bottom: 2px;
+  }
+}
+
+.btn__courses a:hover {
+  color: #345b859b;
+  background-color: #45648514;
+}
+
+.btn__books a:hover {
+  color: #345b859b;
+  background-color: #45648514;
+}
+
+.active {
+  color: #345b859b !important;
+  background-color: #45648514 !important;
+}
+
+.hidden {
+  display: none;
+}
+
+/* CONTACT  */
+
+.contact-page-content {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.contact-page-inline {
+  display: inline-block;
+  vertical-align: top;
+  width: 350px;
+}
+
+.contact-page-inline a {
+  color: #277bc0;
+  letter-spacing: 0;
+}
+
+.contact-form-wrapper {
+  box-shadow: 1px 1px 10px 0 grey;
+  width: 55%;
+  float: right;
+  margin-bottom: 20px;
+}
+
+.contact-form fieldset {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form legend {
+  height: 40px;
+}
+
+.contact-form legend p {
+  margin-top: 10px;
+  color: #277bc0;
+}
+
+.contact-form input[type="text"] {
+  margin-bottom: 10px;
+}
+
+.contact-form input[type="text"],
+input[type="email"] {
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+}
+
+.submit-button-div {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.submit-button-div input[type="submit"] {
+  margin: 0 !important;
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 20vh;
+  margin-top: 10px;
+  resize: none;
+  padding: 0;
+}
+
+.sent-mail-redirect {
+  color: #277bc0;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.sent-mail-redirect:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1100px) {
+  .contact-page-content {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .contact-page-inline {
+    display: block;
+    width: 100%;
+  }
+
   .contact-form-wrapper {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    float: none;
   }
 
   .contact-form fieldset {
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .contact-form input[type='text'], input[type='email'] {
-    width: 100%;
+  .contact-form legend p {
+    margin-top: 5px;
+    color: #277bc0;
+  }
+}
+
+/* PROJECTS */
+.card-bottom-margin {
+  margin-bottom: 15px;
+}
+
+.projects-content p a {
+  color: #277bc0;
+  letter-spacing: 0;
+}
+
+.porjects-content .container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lazy-image {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.project-image {
+  width: 300px;
+  transition: blur 0.5s;
+}
+
+.project-card figure {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card figure figcaption {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card a {
+  color: #277bc0;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .project-card figure img {
+    width: 230px;
   }
 
-  .contact-form input[type='submit'] {
-    margin-left: 35%;
+  .project-card figure figcaption {
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .contact-form textarea {
-      width: 100%;
+  .section--hidden__side {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+}
+
+/* SIGNUP FORM */
+.signupParagraph {
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 400px) {
+  .signupParagraph {
+    margin-bottom: 5px;
+  }
+
+  .section--hidden__side {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+}
+
+.form-signup {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signup h1 {
+  text-align: center;
+}
+.form-signup button {
+  margin-top: 3%;
+}
+
+.form-signup .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signup input[name="firstName"] {
+  margin-bottom: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signup input[name="lastName"] {
+  border-radius: 0;
+  margin-bottom: 3px;
+}
+
+.form-signup input[name="email"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 12px;
+}
+
+.form-signup input:focus {
+  background-color: #faf4b7;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: auto;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  background-color: #a2b5bb;
+  text-align: center;
+}
+
+footer a {
+  margin-right: 10px;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.footer-content p,
+a {
+  color: white;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .contact-form input[type="submit"] {
+    margin-left: 30%;
+    margin-bottom: 15px;
   }
 }
